@@ -4,7 +4,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css'
 import { addHours } from 'date-fns'
 // import esES from 'date-fns/locale/es'
 
-import { CalendarEvent, CalendarModal, FabAddNew, Navbar } from "../"
+import { CalendarEvent, CalendarModal, FabAddNew, FabDelete, Navbar } from "../"
 import { localizer, getMessagesES } from '../../helpers'
 import { useState } from 'react'
 import { useCalendarStore, useUiStore } from '../../hooks'
@@ -85,6 +85,7 @@ export const CalendarPage = () => {
 
       <CalendarModal />
       <FabAddNew />
+      <FabDelete />
     </>
   )
 

@@ -10,8 +10,8 @@ export const FabAddNew = () => {
 
   const handleClickNew = () => {
     setActiveEvent({
-          title: 'Hello',
-          notes: 'Infernus',
+          title: '',
+          notes: '',
           start: new Date(),
           end: addHours(new Date(), 2),
           bgcolor: '#fafafa',

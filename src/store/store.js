@@ -6,8 +6,9 @@ export const store = configureStore({
     reducer: { // Maneja el estado global de la aplicación
         ui: uiSlice.reducer,
         calendar: calendarSlice.reducer
-    }
+    },
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false
+    })
 
-
-
-}); // Crea la store de Redux
+}); 

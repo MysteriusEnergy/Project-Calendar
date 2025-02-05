@@ -13,7 +13,6 @@ import { useCalendarStore, useUiStore } from '../../hooks';
 registerLocale('es', es)
 
 
-
 const customStyles = {
   content: {
     top: '50%',
@@ -35,7 +34,7 @@ export const CalendarModal = () => {
 
   
   const { isDateModalOpen, closeDateModal } = useUiStore();
-  const {activeEvent} = useCalendarStore()
+  const {activeEvent, startSavingEvent} = useCalendarStore()
 
   const [formSubmitted, setFormSubmitted] = useState(false);
   // const [isOpen, setIsOpen] = useState(true);
@@ -53,7 +52,6 @@ export const CalendarModal = () => {
     return (formValues.title.length > 0) 
     ? 'is-valid' 
     : 'is-invalid';
-
 
   }, [formValues.title, formSubmitted])
 
@@ -84,7 +82,7 @@ export const CalendarModal = () => {
 
   }
 
-  const onSubmit = (event) => {
+  const onSubmit = async(event) => {
     event.preventDefault(); // Evita que se recargue la página
     setFormSubmitted(true);
     const difference = differenceInSeconds(formValues.end, formValues.start)
@@ -98,6 +96,12 @@ export const CalendarModal = () => {
     }
 
     if (formValues.title.length <= 0) return;
+
+
+      // TODO
+    await startSavingEvent(formValues);
+    closeDateModal();
+    setFormSubmitted(false);
 
   }
 
