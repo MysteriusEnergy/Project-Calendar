@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-35%);
+}
+
+.left {
+  width: 50%;
+  height: 100%;
+}
+
+.left img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-top-right-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+.right {
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  padding: 90px 30px;
+}
+
+.login__title {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.login__subtitle {
+  font-size: 15px;
+  color: #818181;
+}
+
+form {
+  margin: 35px 0;
+}
+
+
+form .login__input {
+  display: block;
+  width: 80%;
+  border: #d1d1d1 solid 1px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 80%;
+}
+
+.input-container input {
+    width: 100%;
+}
+
+.pass-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #818181;
+    cursor: pointer;
+}
+
+input:focus {
+  border: #5cb338 solid 2px;
+  outline: none;
+}
+
+.login__check {
+  accent-color: #5cb338;
+  margin-right: 5px;
+}
+
+.login__subtitle--act {
+  color: #5cb338;
+  margin-top: 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+.login__subtitle--act:hover {
+  color: #6aca40;
+  cursor: pointer;
+}
+
+.login__button {
+  background-color: #5cb338;
+  border: none;
+  color: #fff;
+  width: 80%;
+  padding: 12px;
+  margin: 20px 0;
+  border-radius: 12px;
+  transition: all ease-in-out 0.2s;
+}
+
+.login__button:hover {
+  background-color: #6aca40;
+  cursor: pointer;
+}
+
