@@ -1,6 +1,9 @@
-# MATCHEDAY - Informacion Deportiva
+<p align="center">
 
-<img height="200" src="https://i.postimg.cc/rphYhj7V/Matchaday.png" >
+   # MATCHEDAY - Informacion Deportiva
+
+  <img src="https://i.postimg.cc/rphYhj7V/Matchaday.png" />
+</p>
 
 ## 📌¿Que es MATCHEDAY?
 
