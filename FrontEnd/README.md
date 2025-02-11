@@ -83,7 +83,7 @@ npm start
 ### Frontend:
 - [Jose David Ayala](https://github.com/1DavidX)
 - [Juan Steban Posso](https://github.com/steban2030)
-- [Melissa Vivas F.]()
+- [Melissa Vivas F.](https://github.com/MelissaVivasF)
 - [Carlos Quintero](https://github.com/Carlitos-quintero)
 
 ## Contribución 🤝
