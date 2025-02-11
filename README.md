@@ -78,7 +78,7 @@ npm start
 - [Jhon Mario](https://github.com/MysteriusEnergy)
 - [Jhon Edwar Suarez Quiñonez](https://github.com/edwarSuarezQ)
 - [Sandro Banguera Moreno](https://github.com/SandroBM)
-- [Carlos lasso]()
+- [Carlos lasso](https://github.com/FrankkDeveloper)
 
 ### Frontend:
 - [Jose David Ayala](https://github.com/1DavidX)
