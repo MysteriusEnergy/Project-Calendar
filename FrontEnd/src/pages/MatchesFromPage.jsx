@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useTasks } from "../context/TasksContext";
+import { useMatches } from "../context/MatchesContext";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -7,27 +7,27 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 dayjs.extend(utc);
 
-function TaskFromPage() {
+function MatcheFromPage() {
 
   const { register, handleSubmit, setValue } = useForm();
-  const { createTask, getTask, updateTask } = useTasks();
+  const { createMatche, getMatche, updateMatche } = useMatches();
   const navigate = useNavigate();
   const params = useParams();
 
   useEffect(() => {
-    async function loadTask() {
+    async function loadMatche() {
       if (params.id) {
-        const task = await getTask(params.id);
-        console.log(task);
-        setValue('title', task.title);
-        setValue('description', task.description);
-        setValue('date', dayjs(task.date).utc().format("YYYY-MM-DD"));
+        const Matche = await getMatche(params.id);
+        console.log(Matche);
+        setValue('title', Matche.title);
+        setValue('description', Matche.description);
+        setValue('date', dayjs(Matche.date).utc().format("YYYY-MM-DD"));
       }
       else{
         setValue('date', dayjs().utc().format("YYYY-MM-DD"));
       }
     }
-    loadTask();
+    loadMatche();
   }, []);
 
   const onSubmits = handleSubmit((data) => {
@@ -36,11 +36,11 @@ function TaskFromPage() {
       date: data.date ? dayjs(data.date).format() : dayjs.utc().format(),
     }
     if (params.id) {
-      updateTask(params.id, dataValid);
+      updateMatche(params.id, dataValid);
     } else {
-      createTask(dataValid);
+      createMatche(dataValid);
     }
-    navigate('/tasks');
+    navigate('/Matches');
   })
 
   return (
@@ -73,4 +73,4 @@ function TaskFromPage() {
   );
 }
 
-export default TaskFromPage;
+export default MatcheFromPage;

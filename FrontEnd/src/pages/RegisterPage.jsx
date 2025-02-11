@@ -19,7 +19,7 @@ function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/tasks");
+    if (isAuthenticated) navigate("/Matches");
   }, [isAuthenticated]);
 
   const onSubmits = handleSubmit(async (values) => {

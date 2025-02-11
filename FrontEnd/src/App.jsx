@@ -6,18 +6,18 @@ import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 
-import TasksPage from "./pages/TasksPage";
-import TaskFromPage from "./pages/TaskFromPage";
+import MatchesPage from "./pages/MatchesPage";
+import MatcheFromPage from "./pages/MatchesFromPage";
 import ProfilePage from "./pages/ProfilePage";
 
 import ProtecteRoute from "./ProtectedRoute";
-import { TaskProvider } from "./context/TasksContext";
+import { MatcheProvider } from "./context/MatchesContext";
 import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <AuthProvider>
-      <TaskProvider>
+      <MatcheProvider>
         <BrowserRouter>
           <main className="container mx-auto px-10">
             <Routes>
@@ -27,22 +27,22 @@ function App() {
 
               <Route element={<ProtecteRoute />}>
                 <Route 
-                  path="/tasks" 
+                  path="/Matches" 
                   element={
                     <>
                       <Navbar />
-                      <TasksPage />
+                      <MatchesPage />
                     </>
                   } 
                 />
-                <Route path="/add-task" element={<TaskFromPage />} />
-                <Route path="/tasks/:id" element={<TaskFromPage />} />
+                <Route path="/add-Matche" element={<MatcheFromPage />} />
+                <Route path="/Matches/:id" element={<MatcheFromPage />} />
                 <Route path="/profile" element={<ProfilePage />} />
               </Route>
             </Routes>
           </main>
         </BrowserRouter>
-      </TaskProvider>
+      </MatcheProvider>
     </AuthProvider>
   );
 }

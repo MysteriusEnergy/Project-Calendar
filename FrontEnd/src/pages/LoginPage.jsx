@@ -14,7 +14,7 @@ function LoginPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (isAuthenticated) navigate("/tasks");
+    if (isAuthenticated) navigate("/Matches");
   }, [isAuthenticated]);
 
   const onSubmits = handleSubmit((data) => {

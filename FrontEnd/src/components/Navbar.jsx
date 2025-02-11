@@ -10,12 +10,12 @@ function Navbar() {
       <ul className="flex gap-x-2">
         <li>
           <Link to="/profile" className="text-white hover:text-blue-300">
-            Profile
+            Perfil
           </Link>
         </li>
         <li>
           <Link to="/" onClick={signOut} className="text-white hover:text-blue-300">
-            Logout
+            Cerrar sesión
           </Link>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function TasksPage() {
+function MatchesPage() {
   useEffect(() => {
     // Cargar el script del widget
     const script = document.createElement("script");
@@ -41,4 +41,4 @@ function TasksPage() {
   );
 }
 
-export default TasksPage;
+export default MatchesPage;
